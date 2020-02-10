@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+		<title>Pharmacy2U</title>
+		
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		
+		<!-- Latest compiled and minified Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+		<!-- Custom font from Google -->
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap" rel="stylesheet">
+		
+		<link rel="stylesheet" href="custom.css">
+		
+		<script type="text/javascript">
+
+			// Called on form's `onsubmit`
+			function tosubmit() {
+				// Getting the value of your text input
+				var firstName = document.getElementById("firstName").value;
+
+				// Storing the value above into localStorage
+				localStorage.setItem("firstName", firstName);
+
+				return true;
+			}
+
+		</script>
+	
+	</head>
+	<body>
+		<header>
+			<div class="header-back">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<img src="Pharmacy2U-Logo.png" class="img-fluid py-3" alt="Pharmacy2U">
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="banner-back">
+			<div class="container py-5">
+				<div class="row">
+					<div class="col-sm-6">
+							<div class="col-sm-12 blue-back py-3">
+								<h1 class="text-white font-weight-bold">Welcome to Pharmacy2U</h1>
+								<h2 class="text-white">Free delivery on all<br />NHS prescriptions</h2>
+							</div>
+					</div>
+					<div class="col-sm-12 py-2">
+						<img src="NHS-White.png" class="img-fluid float-right NHS-padding" alt="Providing NHS services">
+						<div class="col-sm-6 pt-5 float-left">	
+							<div class="row">
+								<div class="col-sm-6 pl-0 py-2 btn-container">
+									<button type="button" class="btn btn-login btn-lg btn-block py-3" onclick="displayPanel()">Login</button>
+								</div>
+								<div class="col-sm-6 py-2 btn-container">
+									<button type="button" class="btn btn-register btn-lg btn-block py-3" onclick="displayPanel()">Register</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row" id="login-panel">
+					<div class="col-sm-6">
+						<div class="col-sm-12 blue-back p-3">
+							<p class="text-white text-center m-0">Enter your first name to login:</p>
+							<form onsubmit="tosubmit();" action="order-summary.html">
+							<div class="row">
+								<div class="col-sm-3">
+								</div>
+								<div class="col-sm-6 p-3">
+									<input type="text" class="form-control mb-2" id="firstName" placeholder="First name"/>
+									<input type="submit" class="btn btn-login btn-lg btn-block"/>
+								</div>
+								<div class="col-sm-3">
+								</div>
+							</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row py-5">
+				<div class="col-sm-7">
+					<h3 class="text-blue font-weight-bold">Heading goes here</h3>
+					<p class="text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel<br />facilisis ut labore et dolore.</p>
+					<h4 class="text-blue font-weight-bold pt-5">Sub-heading goes here</h4>
+					<p class="text-grey">Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel<br />facilisis ut labore et dolore.</p>
+				</div>
+				<div class="col-sm-1">
+				</div>
+				<div class="col-sm-4">
+					<div class="embed-responsive embed-responsive-4by3">
+						<video poster="Ruth-Cover.png" class="embed-responsive-item">
+							<source src="#" type="video/mp4">
+						</video>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			function displayPanel() {
+			  var x = document.getElementById("login-panel");
+			  if (x.style.maxHeight === "0px") {
+				x.style.maxHeight = x.scrollHeight + "px";
+			  } else {
+				x.style.maxHeight = "0px";
+			  }
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+		<title>Pharmacy2U</title>
+		
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		
+		<!-- Latest compiled and minified Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+		<!-- Custom font from Google -->
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap" rel="stylesheet">
+		
+		<link rel="stylesheet" href="custom.css">
+		
+		<script>
+
+			// Called on body's `onload` event
+			function init() {
+				// Retrieving the text input's value which was stored into localStorage
+				var firstName = localStorage.getItem("firstName");
+
+				// Writing the value in the document
+				document.getElementById('firstName').innerHTML = firstName;
+				document.getElementById('firstNameSummary').innerHTML = firstName;
+			}
+
+		</script>
+
+	</head>
+	<body onload="init();">
+		<header>
+			<div class="header-back">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<img src="Pharmacy2U-Logo.png" class="img-fluid py-3" alt="Pharmacy2U">
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="banner-back-2">
+			<div class="container py-5">
+				<div class="row">
+					<div class="col-sm-6">
+							<div class="col-sm-12 blue-back py-3">
+								<h1 class="text-white font-weight-bold">Hi, <span id="firstName">Firstname</span></h1>
+								<h2 class="text-white">We're now connected to<br />your GP</h2>
+							</div>
+					</div>
+					<div class="col-sm-12 py-2">
+						<img src="NHS-White.png" class="img-fluid float-right NHS-padding" alt="Providing NHS services">
+					</div>
+				</div>
+				<div class="row" id="login-panel">
+					<div class="col-sm-6">
+						<div class="col-sm-12 blue-back p-3">
+							<p class="text-white text-center m-0">Enter your first name to login:</p>
+							<form action="order-summary.html" >
+							<div class="row">
+								<div class="col-sm-3">
+								</div>
+								<div class="col-sm-6 p-3">
+									<input type="text" class="form-control mb-2" placeholder="First name"/>
+									<input type="submit" class="btn btn-login btn-lg btn-block"/>
+								</div>
+								<div class="col-sm-3">
+								</div>
+							</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row py-5">
+				<div class="col-sm-3">
+				</div>
+				<div class="col-sm-6">
+					<h2 class="text-blue font-weight-bold">Hi, <span id="firstNameSummary">Firstname</span>, below is summary of your order:</h2>
+					<p>Item 1 x 28<br/>Item 2 x 32</p>
+				</div>
+				<div class="col-sm-3">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,69 @@
+.header-back {
+	background-color: #005b8f;
+}
+
+.blue-back {
+	background-color: rgba(0, 91, 143, 0.9);
+}
+
+.banner-back {
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6)), url("banner-image.png") no-repeat top fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.banner-back-2 {
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6)), url("banner-image-2.png") no-repeat top fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/*Overwrite Bootstrap text decoration: none*/
+a {
+	text-decoration: underline;
+}
+
+/*Use custom font*/
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.text-blue {
+	color: #005b8f;
+}
+
+.btn-login {
+	color: white;
+	border-radius: 0px;
+	background-color: #00c4a3;
+}
+
+.btn-register {
+	color: white;
+	border-radius: 0px;
+	background: none;
+	border:  2px solid white;
+}
+
+@media only screen and (min-width: 600px) {
+	.NHS-padding {
+		padding-top: 69px
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.btn-container {
+		padding-left: 0!important;
+		padding-right: 0!important;
+	}
+}
+
+#login-panel {
+	max-height: 0px;
+    overflow: hidden;
+	transition: max-height 0.5s ease;
+}
